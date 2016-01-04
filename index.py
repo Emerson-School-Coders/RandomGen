@@ -3,9 +3,15 @@ from random import *
 import menu
 from getkey import getKey
 savef = open('all_ever_generated', 'a')
-saver = open('all_ever_generated', 'r')
+savecache = open('all_ever_generated', 'r')
 savef1 = open('all_ever_generated1', 'a')
-saver1 = open('all_ever_generated1', 'r')
+savecache1 = open('all_ever_generated1', 'r')
+saver=[]
+saver1=[]
+for line in savecache:
+    saver.append(line)
+for line in savecache1:
+    saver1.append(line)
 continue1=0
 nouns=[['dog','c'],['cat','c'],['mud','c'],['universe','c'],['tree','c'],['forest','c'],['text document','c'],['apple','v'],['orange','v'],['leash','c'],['fir','c'],['bacon','c'],['adventure','v'],['turtle','c'],['nun','c'],['table','c'],['TV','c'],['peom','c'],['glockenspiel','c'],['dream','c'],['computer','c'],['shortstop','c'],['underwear','v'],['Border Collie','c']]
 art=['the','a']
@@ -15,7 +21,7 @@ adj=[['sparkly','c'],['shiny','c'],['fuzzy','c'],['purple','c'],['red','c'],['or
 pre=['with','under','over','into','onto','between','through']
 pro=['I','We','You','They']
 save=[]
-verbVN=['Absorb','Actuate','Improve','Generate','Allow','Increase','Attach','Limit','Attract','Maintain','Conduct','Position','Connect','Prevent','Contain','Protect','Control','Provide','Convert','Reduce','Create','Regulate','Decrease','Resist','Direct','Rotate','Facilitate','Transmit']
+verbVN=['Absorb','Actuate','Improve','Generate','Allow','Increase','Attach','Limit','Attract','Maintain','Conduct','Position','Connect','Prevent','Contain','Protect','Control','Provide','Convert','Reduce','Create','Regulate','Decrease','Resist','Direct','Rotate','Facilitate','Transmit','Seal']
 nounVN=['Access','Air','Apperance','Circuit','Cold','Component','Corrosion','Current','Deflection','Dirt','Energy','Entry','Flow','Fluid','Friction','Heat','Impact','Mass','Moisture','Noise','Light','Parts','Path','Performance','Stability','Surface','Travel','Vibration']
 gen=menu.menu([['Verb/Noun combos','VN'],['Random sentences','RS']],1,'What do you want to generate?')
 if gen=='RS':
@@ -28,8 +34,8 @@ if gen=='RS':
             for i in range(len(save)):
                 print(save[i-1])
         elif times=='VAG':
-            for line in saver1:
-                print(line[:-1])
+            for i in range(len(saver1)):
+                print(saver1[i][:-1])
         else:
             for i in range(times):
                 adjn=randint(0,len(adj)-1)
@@ -55,6 +61,7 @@ if gen=='RS':
                 print(sentence)
                 save.append(sentence)
                 savef1.write(sentence+'\n')
+                saver1.append(sentence)
         print('Finished!  Press q to continue.')
         while getKey()!='q':
             pass
@@ -68,8 +75,8 @@ else:
             for i in range(len(save)):
                 print(save[i-1])
         elif times=='VAG':
-            for line in saver:
-                print(line[:-1])
+            for i in range(len(saver)):
+                print(saver[i][:-1])
         else:
             for i in range(times):
                 verb=verbVN[randint(0,len(verbVN)-1)]
@@ -78,6 +85,7 @@ else:
                 save.append(randomVN)
                 print(randomVN)
                 savef.write(randomVN+'\n')
+                saver.append(randomVN)
         print('Finished!  Press q to continue.')
         while getKey()!='q':
             pass
