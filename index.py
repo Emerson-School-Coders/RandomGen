@@ -20,7 +20,7 @@ nounVN=['Access','Air','Apperance','Circuit','Cold','Component','Corrosion','Cur
 gen=menu.menu([['Verb/Noun combos','VN'],['Random sentences','RS']],1,'What do you want to generate?')
 if gen=='RS':
     while True:
-        times=menu.menu([['1',1],['10',10],['20',20],['50',50],['100',100],['200',200],['500',500],['1000',1000],['Exit','e'],['View all generated this session','VA'],['View all ever generated','VAG']],3,'How many do you want to generate?')
+        times=menu.menu([['Generate 1',1],['Generate 10',10],['Generate 20',20],['Generate 50',50],['Generate 100',100],['Generate 200',200],['Generate 500',500],['Generate 1000',1000],['Exit','e'],['View all generated this session','VA'],['View all generated previously','VAG']],3,'What do you want to do?')
         menu.clear()
         if times=='e':
             exit()
@@ -60,7 +60,7 @@ if gen=='RS':
             pass
 else:
     while True:
-        times=menu.menu([['1',1],['10',10],['20',20],['50',50],['100',100],['200',200],['500',500],['1000',1000],['Exit','e'],['View all generated this session','VA'],['View all ever generated','VAG']],3,'How many do you want to generate?')
+        times=menu.menu([['Generate 1',1],['Generate 10',10],['Generate 20',20],['Generate 50',50],['Generate 100',100],['Generate 200',200],['Generate 500',500],['Generate 1000',1000],['Exit','e'],['View all generated this session','VA'],['View all generated previously','VAG']],3,'What do you want to do?')
         menu.clear()
         if times=='e':
             exit()
