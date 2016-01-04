@@ -1,10 +1,12 @@
 from time import *
 from random import *
 import menu
+from getkey import getKey
 savef = open('all_ever_generated', 'a')
 saver = open('all_ever_generated', 'r')
 savef1 = open('all_ever_generated1', 'a')
 saver1 = open('all_ever_generated1', 'r')
+continue1=0
 nouns=[['dog','c'],['cat','c'],['mud','c'],['universe','c'],['tree','c'],['forest','c'],['text document','c'],['apple','v'],['orange','v'],['leash','c'],['fir','c'],['bacon','c'],['adventure','v'],['turtle','c'],['nun','c'],['table','c'],['TV','c'],['peom','c'],['glockenspiel','c'],['dream','c'],['computer','c'],['shortstop','c'],['underwear','v'],['Border Collie','c']]
 art=['the','a']
 verbs=[['run','p'],['walk','p'],['go','p'],['stay here','p'],['eat','a'],['poop','p'],['squirt','a'],['applaud','a'],['dream','p']]
@@ -53,7 +55,9 @@ if gen=='RS':
                 print(sentence)
                 save.append(sentence)
                 savef1.write(sentence+'\n')
-        input('Finished!  Press enter to continue.')
+        print('Finished!  Press q to continue.')
+        while getKey()!='q':
+            pass
 else:
     while True:
         times=menu.menu([['1',1],['10',10],['20',20],['50',50],['100',100],['200',200],['500',500],['1000',1000],['Exit','e'],['View all generated this session','VA'],['View all ever generated','VAG']],3,'How many do you want to generate?')
@@ -74,4 +78,6 @@ else:
                 save.append(randomVN)
                 print(randomVN)
                 savef.write(randomVN+'\n')
-        input('Finished! Press enter to continue.')
+        print('Finished!  Press q to continue.')
+        while getKey()!='q':
+            pass
