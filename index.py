@@ -7,6 +7,7 @@ savef1 = open('all_ever_generated1', 'a')
 savecache1 = open('all_ever_generated1', 'r')
 saver=[]
 saver1=[]
+save=[]
 for line in savecache:
     saver.append(line)
 for line in savecache1:
@@ -15,47 +16,47 @@ continue1=0
 nounVN=[]
 nounVNfile=open('nounVN.rgf')
 for line in nounVNfile:
-    nounVN.append(item)
+    nounVN.append(line[:-1])
 nounVNfile.close()
 verbVN=[]
 verbVNfile=open('verbVN.rgf')
 for line in verbVNfile:
-    verbVN.append(item)
+    verbVN.append(line[:-1])
 verbVNfile.close()
 pro=[]
 profile=open('pro.rgf')
 for line in profile:
-    pro.append(item)
+    pro.append(line[:-1])
 profile.close()
 pre=[]
 prefile=open('pre.rgf')
 for line in prefile:
-    pre.append(item)
+    pre.append(line[:-1])
 prefile.close()
 nouns=[]
 nounsfile=open('nouns.rgf')
 for line in nounsfile:
-    nouns.append(item)
+    nouns.append(line[:-1])
 nounsfile.close()
 verbs=[]
 verbsfile=open('verbs.rgf')
 for line in verbsfile:
-    verbs.append(line)
+    verbs.append(line[:-1])
 verbsfile.close()
 art=[]
 artfile=open('art.rgf')
 for line in artfile:
-    art.append(line)
+    art.append(line[:-1])
 artfile.close()
 adj=[]
 adjfile=open('adj.rgf')
 for line in adjfile:
-    adj.append(item)
+    adj.append(line[:-1])
 adjfile.close()
 adv=[]
 advfile=open('adv.rgf')
 for line in advfile:
-    adv.append(item)
+    adv.append(line[:-1])
 advfile.close()
 gen=easygui.buttonbox('What do you want to generate?','Make a choice',['Random sentences','Functions'])
 if gen=='Random sentences':
@@ -106,15 +107,12 @@ if gen=='RS':
                 nounu=nouns[nounn]
                 artu=art[randint(0,1)]
                 verbn=randint(0,len(verbs)-1)
-                verbu=verbs[verbn][0]
+                verbu=verbs[verbn]
                 pron=randint(0,len(pro)-1)
                 prou=pro[pron]
                 advn=randint(0,len(adv)-1)
                 advu=adv[advn]
-                if verbs[verbn][1] == 'p':
-                    prep=True
-                else:
-                    prep=False
+                prep=True
                 if prep==True:
                     preu=pre[randint(0,len(pre)-1)]
                     sentence=prou+' '+advu+' '+verbu+' '+preu+' '+artu+' '+adju+' '+nounu+'.'
