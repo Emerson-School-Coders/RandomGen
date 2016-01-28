@@ -12,16 +12,51 @@ for line in savecache:
 for line in savecache1:
     saver1.append(line)
 continue1=0
-nouns=[['dog','c'],['cat','c'],['mud','c'],['universe','c'],['tree','c'],['forest','c'],['text document','c'],['apple','v'],['orange','v'],['leash','c'],['fir','c'],['bacon','c'],['adventure','v'],['turtle','c'],['nun','c'],['table','c'],['TV','c'],['poem','c'],['glockenspiel','c'],['dream','c'],['computer','c'],['shortstop','c'],['underwear','v'],['clown','n'],['pork','n']]
-art=['the','a']
-verbs=[['run','p'],['walk','p'],['go','p'],['stay here','p'],['eat','a'],['poop','p'],['squirt','a'],['applaud','a'],['dream','p']]
-adv=['secretly','suddenly','quickly','happily','angrily','baconly','fuzzily','cheaply','slowly','instantaneously','brightly','groggily','dreamily','rapturously']
-adj=[['sparkly','c'],['shiny','c'],['fuzzy','c'],['purple','c'],['red','c'],['orange','c'],['yellow','c'],['glittery','c'],['green','c'],['blue','c'],['purple','c'],['black','c'],['brown','c'],['spotted','c'],['dark','c'],['light','c'],['corrugated','c'],['paisley','c'],['pregnant','c'],['snowy','c'],['dead','c']]
-pre=['with','under','over','into','onto','between','through']
-pro=['I','We','You','They']
-save=[]
-verbVN=['Absorb','Actuate','Improve','Generate','Allow','Increase','Attach','Limit','Attract','Maintain','Conduct','Position','Connect','Prevent','Contain','Protect','Control','Provide','Convert','Reduce','Create','Regulate','Decrease','Resist','Direct','Rotate','Facilitate','Transmit','Seal']
-nounVN=['Access','Air','Apperance','Circuit','Cold','Component','Corrosion','Current','Deflection','Dirt','Energy','Entry','Flow','Fluid','Friction','Heat','Impact','Mass','Moisture','Noise','Light','Parts','Path','Performance','Stability','Surface','Travel','Vibration']
+nounVN=[]
+nounVNfile=open('nounVN.rgf')
+for line in nounVNfile:
+    nounVN.append(item)
+nounVNfile.close()
+verbVN=[]
+verbVNfile=open('verbVN.rgf')
+for line in verbVNfile:
+    verbVN.append(item)
+verbVNfile.close()
+pro=[]
+profile=open('pro.rgf')
+for line in profile:
+    pro.append(item)
+profile.close()
+pre=[]
+prefile=open('pre.rgf')
+for line in prefile:
+    pre.append(item)
+prefile.close()
+nouns=[]
+nounsfile=open('nouns.rgf')
+for line in nounsfile:
+    nouns.append(item)
+nounsfile.close()
+verbs=[]
+verbsfile=open('verbs.rgf')
+for line in verbsfile:
+    verbs.append(line)
+verbsfile.close()
+art=[]
+artfile=open('art.rgf')
+for line in artfile:
+    art.append(line)
+artfile.close()
+adj=[]
+adjfile=open('adj.rgf')
+for line in adjfile:
+    adj.append(item)
+adjfile.close()
+adv=[]
+advfile=open('adv.rgf')
+for line in advfile:
+    adv.append(item)
+advfile.close()
 gen=easygui.buttonbox('What do you want to generate?','Make a choice',['Random sentences','Functions'])
 if gen=='Random sentences':
     gen = 'RS'
@@ -66,9 +101,9 @@ if gen=='RS':
         else:
             for i in range(times):
                 adjn=randint(0,len(adj)-1)
-                adju=adj[adjn][0]
+                adju=adj[adjn]
                 nounn=randint(0,len(nouns)-1)
-                nounu=nouns[nounn][0]
+                nounu=nouns[nounn]
                 artu=art[randint(0,1)]
                 verbn=randint(0,len(verbs)-1)
                 verbu=verbs[verbn][0]
