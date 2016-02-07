@@ -12,9 +12,9 @@ for line in savecache:
 for line in savecache1:
     saver1.append(line)
 continue1=0
-nouns=[['dog','c'],['cat','c'],['mud','c'],['universe','c'],['tree','c'],['forest','c'],['text document','c'],['apple','v'],['orange','v'],['leash','c'],['fir','c'],['bacon','c'],['adventure','v'],['turtle','c'],['nun','c'],['table','c'],['TV','c'],['poem','c'],['glockenspiel','c'],['dream','c'],['computer','c'],['shortstop','c'],['underwear','v'],['clown','n'],['pork','n'],['window','n']]
+nouns=[['dog','c'],['cat','c'],['mud','c'],['universe','c'],['tree','c'],['forest','c'],['text document','c'],['apple','v'],['orange','v'],['leash','c'],['fur','c'],['bacon','c'],['adventure','v'],['turtle','c'],['nun','c'],['table','c'],['TV','c'],['poem','c'],['glockenspiel','c'],['dream','c'],['computer','c'],['shortstop','c'],['underwear','v'],['clown','n'],['pork','n'],['window','n'],['angel','c'],['dance','c'],['candy','c'],['song','c'],['balloon','c'],['umbrella','c']]
 art=['the','a']
-verbs=[['run','p'],['walk','p'],['go','p'],['stay here','p'],['eat','a'],['poop','p'],['squirt','a'],['applaud','a'],['dream','p']]
+verbs=[['run','p'],['walk','p'],['go','p'],['stay here','p'],['eat','a'],['poop','p'],['squirt','a'],['applaud','a'],['dream','p'],['dance','p']]
 adv=['secretly','suddenly','quickly','happily','angrily','baconly','fuzzily','cheaply','slowly','instantaneously','brightly','groggily','dreamily','rapturously']
 adj=[['sparkly','c'],['shiny','c'],['fuzzy','c'],['purple','c'],['red','c'],['orange','c'],['yellow','c'],['glittery','c'],['green','c'],['blue','c'],['purple','c'],['black','c'],['brown','c'],['spotted','c'],['dark','c'],['light','c'],['corrugated','c'],['paisley','c'],['pregnant','c'],['snowy','c'],['dead','c']]
 pre=['with','under','over','into','onto','between','through']
