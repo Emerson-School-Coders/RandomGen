@@ -30,7 +30,7 @@ else:
 def main(gen):
     if gen=='RS':
         while True:
-            times=easygui.choicebox("What do you want to do?","Choose an option",['Generate 1','Generate 10','Generate 20','Generate 50','Generate 100','Generate 200','Generate 500','Generate 1000','Generate 10000(Not recommended)','Generate Functions','Exit','View all generated this session','View all ever generated',])
+            times=easygui.choicebox("What do you want to do?","Generating sentences: Choose an option",['Generate 1','Generate 10','Generate 20','Generate 50','Generate 100','Generate 200','Generate 500','Generate 1000','Generate 10000(Not recommended)','Generate Functions','Exit','View all generated this session','View all ever generated',])
             if times=='Generate 1':
                times=1
             elif times=='Generate 10':
@@ -95,7 +95,7 @@ def main(gen):
             easygui.textbox('Your sentences:','The sentences',stuffs)
     else:
         while True:
-            times=easygui.choicebox("What do you want to do?","Choose an option",['Generate 1','Generate 10','Generate 20','Generate 50','Generate 100','Generate 200','Generate 500','Generate 1000','Generate 10000(Not recommended)','Generate Sentences','Exit','View all generated this session','View all ever generated'])
+            times=easygui.choicebox("What do you want to do?","Generating functions: Choose an option",['Generate 1','Generate 10','Generate 20','Generate 50','Generate 100','Generate 200','Generate 500','Generate 1000','Generate 10000(Not recommended)','Generate Sentences','Exit','View all generated this session','View all ever generated'])
             if times=='Generate 1':
                 times=1
             elif times=='Generate 10':
